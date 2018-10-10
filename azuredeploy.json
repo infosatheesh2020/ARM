@@ -61,7 +61,7 @@
     "extensionName": "DockerExtension",
     "diskStorageType": "Standard_LRS",
     "vmName": "MyDockerVM",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
   },
   "resources": [
     {
