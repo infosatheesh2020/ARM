@@ -13,6 +13,9 @@
     },
     "subnetName": {
         "value": "mySubnet"
-    }
+    },
+    "virtualNetworkResourceGroup": {
+      "value": "myVnetRG"
+  }
   }
 }
