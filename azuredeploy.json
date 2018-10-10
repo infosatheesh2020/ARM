@@ -51,12 +51,6 @@
         "metadata": {
           "description": "Existing Subnet name."
         }
-      },
-      "virtualNetworkResourceGroup": {
-        "type": "string",
-        "metadata": {
-          "description": "Existing resource Group name which hosts VNET."
-        }
       }
   },
   "variables": {
@@ -67,7 +61,7 @@
     "extensionName": "DockerExtension",
     "diskStorageType": "Standard_LRS",
     "vmName": "MyDockerVM",
-    "vnetID": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/', parameters('subnetName'))]"
   },
   "resources": [
