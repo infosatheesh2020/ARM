@@ -70,7 +70,7 @@
       "name": "[variables('nicName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+        "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ],
       "properties": {
         "ipConfigurations": [
